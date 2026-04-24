@@ -1,0 +1,109 @@
+.projects-page {
+  padding: 24px 0 50px;
+}
+
+.projects-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-card);
+  background:
+    radial-gradient(circle at 78% 10%, rgba(52, 211, 153, 0.12), transparent 42%),
+    linear-gradient(155deg, rgba(17, 28, 42, 0.84), rgba(10, 18, 31, 0.9));
+}
+
+.projects-search {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 26px;
+  padding: 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  background: rgba(13, 23, 37, 0.74);
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.search-input {
+  width: 100%;
+  padding: 11px 14px 11px 40px;
+  background: rgba(17, 28, 42, 0.84);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  border-color: var(--border-primary);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+  outline: none;
+}
+
+.filter-select {
+  min-width: 180px;
+  padding: 11px 14px;
+  background: rgba(17, 28, 42, 0.84);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 16px;
+}
+
+/* Modal specific for Create Project */
+.form-group-row {
+  display: flex;
+  gap: 14px;
+}
+
+.form-group-row > * {
+  flex: 1;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+@media (max-width: 860px) {
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-search {
+    flex-direction: column;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+
+  .form-group-row {
+    flex-direction: column;
+  }
+}

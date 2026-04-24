@@ -1,0 +1,308 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  padding: 12px 0 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 11, 18, 0.98) 0%,
+    rgba(5, 11, 18, 0.74) 72%,
+    rgba(5, 11, 18, 0) 100%
+  );
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 62px;
+  padding: 0 14px;
+  border: 1px solid var(--border-card);
+  border-radius: 18px;
+  background: rgba(10, 18, 30, 0.78);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+  gap: 12px;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.navbar-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 12px;
+  color: #07212f;
+  box-shadow: 0 10px 22px rgba(34, 211, 238, 0.26);
+}
+
+.navbar-logo-text {
+  color: var(--text-white);
+}
+
+.navbar-logo:hover {
+  opacity: 0.95;
+}
+
+/* Nav Links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(16, 27, 41, 0.74);
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 13px;
+  border-radius: 9px;
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.navbar-link:hover {
+  color: var(--text-white);
+  background: rgba(174, 201, 234, 0.12);
+}
+
+.navbar-link.active {
+  color: #051c2e;
+  background: linear-gradient(140deg, var(--accent-primary), var(--accent-secondary));
+  box-shadow: 0 8px 18px rgba(34, 211, 238, 0.24);
+}
+
+/* Right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-auth-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Profile */
+.profile-dropdown {
+  position: relative;
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px 6px 6px;
+  background: rgba(16, 27, 42, 0.88);
+  border: 1px solid var(--border-card);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.profile-btn:hover {
+  border-color: var(--border-primary);
+  background: rgba(25, 39, 58, 0.95);
+}
+
+.profile-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #052132;
+  flex-shrink: 0;
+}
+
+.profile-name {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-btn svg.rotated {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 210px;
+  background: linear-gradient(160deg, rgba(20, 31, 46, 0.96), rgba(10, 18, 30, 0.98));
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: var(--shadow-elevated);
+  z-index: 930;
+}
+
+.dropdown-header {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dropdown-user {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-white);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 12px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background: rgba(174, 201, 234, 0.1);
+  color: var(--text-white);
+}
+
+.dropdown-item.danger {
+  color: var(--accent-red);
+}
+
+.dropdown-item.danger:hover {
+  background: rgba(251, 113, 133, 0.14);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.hamburger:hover {
+  color: var(--text-white);
+  background: rgba(174, 201, 234, 0.12);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 84px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(94vw, 420px);
+  background: linear-gradient(160deg, rgba(19, 31, 47, 0.96), rgba(10, 18, 30, 0.98));
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 925;
+  box-shadow: var(--shadow-elevated);
+}
+
+.mobile-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 11px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: var(--transition);
+  text-align: left;
+}
+
+.mobile-link:hover,
+.mobile-link.active {
+  background: rgba(34, 211, 238, 0.16);
+  color: var(--text-white);
+}
+
+.mobile-link.danger {
+  color: var(--accent-red);
+}
+
+.mobile-link.danger:hover {
+  background: rgba(251, 113, 133, 0.14);
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .navbar-links,
+  .navbar-auth-btns {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .profile-name {
+    display: none;
+  }
+
+  .navbar-inner {
+    min-height: 58px;
+  }
+}
